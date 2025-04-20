@@ -67,6 +67,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <div id="header" class="w3-container w3-flat-carrot"> <!-- creates header for the website -->
 	<h1>App6---HTML5-Canvas</h1> <!-- names header -->
 </div>
+	<p> Canvas Starts Here! </p>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -88,32 +89,41 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	  // recieves canvas element and 2D drawing context
 	
     function drawRectangle() { 
-      ctx.fillStyle = "red"; 
+      var canvas = document.getElementById("myCanvas"); 
+      var ctx = canvas.getContext("2d"); 
+      ctx.fillStyle = "#8ACE00"; 
       ctx.fillRect(50, 50, 200, 100);
     }
-	// creates the rectangle function, makes it red, and adds dimensions to the rectangle
+	// creates the rectangle function, makes it green, and adds dimensions to the rectangle
 
      function writeName() { 
-       ctx.font = "20px Arial"; 
-       ctx.fillStyle = "fushsia"; 
-       ctx.fillText("Jess Osaide!", 100, 100); 
+       var canvas = document.getElementById("myCanvas"); 
+       var ctx = canvas.getContext("2d"); 
+       ctx.font = "20px Arial Narrow"; 
+       ctx.fillStyle = "black"; 
+       ctx.fillText("jess osaide", 100, 100); 
      }
-	// creates the name function, makes it fushsia, filled in my name along with dimensions
+	// creates the name function, makes it black, filled in my name along with dimensions
 
      function loadImage() { 
+	var canvas = document.getElementById("myCanvas"); 
+        var ctx = canvas.getContext("2d"); 
 	const img = new Image();
-	<img src="https://media.tenor.com/owsPz6f26FcAAAAM/happy-cat-silly-cat.gif" 
+	img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS500myrzlHoqe17CrcJlqG6m_-mipyRauqHg&s" 
 	img.onload = function() {
 	  ctx.drawImage(img, 100, 100, 100, 100);
-      }
+      };
 	     
      }
-	// adds the image function and it loads cat gif for the image
+	// adds the image function and it loads a cool cat
 
      function clearCanvas() { 
+       var canvas = document.getElementById("myCanvas"); 
+       var ctx = canvas.getContext("2d"); 
        ctx.clearRect(0, 0, canvas.width, canvas.height);
      }
 	// creates the clearCanvas function to clear the page
+	
 </script>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
